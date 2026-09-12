@@ -2,7 +2,6 @@ import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { courses } from '../data/courses'
-import { faculty } from '../data/faculty'
 import Arrow from '../components/Arrow'
 import Reveal from '../components/Reveal'
 
@@ -12,10 +11,6 @@ export default function CourseDetail() {
   const [openFaq, setOpenFaq] = useState(null)
 
   if (!course) return <Navigate to="/courses" replace />
-
-  const courseFaculty = faculty.filter((f) =>
-    f.subjects.some((s) => course.subjects.includes(s))
-  )
 
   return (
     <>
@@ -94,25 +89,6 @@ export default function CourseDetail() {
             ))}
           </div>
         </div>
-
-        {courseFaculty.length > 0 && (
-          <div className="course-faculty">
-            <Reveal><div className="section-tag">Your Mentors</div></Reveal>
-            <div className="course-faculty-grid">
-              {courseFaculty.map((person) => (
-                <Link key={person.id} to={`/faculty/${person.id}`} className="course-faculty-card">
-                  <div className={`faculty-portrait-sm ${person.tone}`}>
-                    <span>{person.initials}</span>
-                  </div>
-                  <div>
-                    <strong>{person.name}</strong>
-                    <small>{person.role}</small>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
 
         <div className="course-faqs">
           <Reveal><div className="section-tag">Course FAQs</div></Reveal>

@@ -8,10 +8,6 @@ const navLinks = [
   ['Home', '/'],
   ['About', '/about'],
   ['Courses', '/courses'],
-  ['Faculty', '/faculty'],
-  ['Results', '/results'],
-  ['Gallery', '/gallery'],
-  ['Blog', '/blog'],
   ['Contact', '/contact'],
 ]
 

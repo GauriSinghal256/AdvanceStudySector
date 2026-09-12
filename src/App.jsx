@@ -3,22 +3,12 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
-import Intro from './components/Intro'
+import BackToTopButton from './components/BackToTopButton'
 import Home from './pages/Home'
 import About from './pages/About'
 import Courses from './pages/Courses'
 import CourseDetail from './pages/CourseDetail'
-import Faculty from './pages/Faculty'
-import FacultyDetail from './pages/FacultyDetail'
-import Results from './pages/Results'
-import Gallery from './pages/Gallery'
-import Testimonials from './pages/Testimonials'
 import Contact from './pages/Contact'
-import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'
-import FAQs from './pages/FAQs'
-import Privacy from './pages/Privacy'
-import Terms from './pages/Terms'
 import './App.css'
 
 function AnimatedRoutes() {
@@ -45,17 +35,7 @@ function AnimatedRoutes() {
           <Route path="/about" element={<About />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/courses/:slug" element={<CourseDetail />} />
-          <Route path="/faculty" element={<Faculty />} />
-          <Route path="/faculty/:id" element={<FacultyDetail />} />
-          <Route path="/results" element={<Results />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/faqs" element={<FAQs />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
@@ -65,7 +45,6 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <HashRouter>
-      <Intro />
       <ScrollToTop />
       <div className="app">
         <Header />
@@ -73,6 +52,7 @@ export default function App() {
           <AnimatedRoutes />
         </main>
         <Footer />
+        <BackToTopButton />
       </div>
     </HashRouter>
   )

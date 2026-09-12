@@ -11,6 +11,11 @@ export default function Courses() {
         tag="Our Courses"
         title={<>Room to grow.<br /><em>Space to become.</em></>}
         subtitle="Learning journeys designed around where you are now — and the person you want to become."
+        image={{
+          src: 'https://images.pexels.com/photos/11025057/pexels-photo-11025057.jpeg?auto=compress&cs=tinysrgb&h=800&w=1000',
+          alt: 'Two students studying together at Advance Study Sector',
+          caption: '500+ students guided',
+        }}
       />
       <section className="section courses-page">
         <div className="course-list">

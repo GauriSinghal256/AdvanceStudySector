@@ -16,6 +16,11 @@ export default function About() {
         tag="About Advance Study Sector"
         title={<>Education that<br /><em>opens doors.</em></>}
         subtitle="Founded in 2018 in Kurukshetra, Advance Study Sector was built on a simple idea: every student deserves to be understood before they are taught."
+        image={{
+          src: 'https://images.pexels.com/photos/6209570/pexels-photo-6209570.jpeg?auto=compress&cs=tinysrgb&h=800&w=1000',
+          alt: 'Students in an interactive classroom session at Advance Study Sector',
+          caption: 'Since 2018',
+        }}
       />
 
       <section className="section about-page">
